@@ -1,0 +1,32 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="planetBody" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#A79FFF"/>
+      <stop offset="45%" stop-color="#7F77DD"/>
+      <stop offset="100%" stop-color="#453F94"/>
+    </radialGradient>
+    <linearGradient id="ringStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5DCAA5"/>
+      <stop offset="100%" stop-color="#7F77DD"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ring (drawn first so the planet body naturally covers its middle, like Saturn) -->
+  <ellipse cx="50" cy="55" rx="43" ry="12" fill="none" stroke="url(#ringStroke)" stroke-width="4.5" transform="rotate(-10 50 55)"/>
+
+  <!-- planet sphere -->
+  <circle cx="47" cy="45" r="26" fill="url(#planetBody)"/>
+
+  <!-- meridian curves so it reads clearly as a globe -->
+  <path d="M 21 45 A 26 10 0 0 0 73 45" fill="none" stroke="#2C2870" stroke-width="1.4" opacity="0.35"/>
+  <path d="M 47 19 A 10 26 0 0 0 47 71" fill="none" stroke="#2C2870" stroke-width="1.4" opacity="0.35"/>
+
+  <!-- soft shadow for sphere depth -->
+  <path d="M 24 51 A 26 26 0 0 0 64 63 A 26 26 0 0 1 24 51 Z" fill="#2C2870" opacity="0.25"/>
+
+  <!-- trading uptrend glyph riding the ring, standing in for the exchange/market theme -->
+  <g transform="translate(64,58)">
+    <path d="M0 10 L6 2 L11 6 L19 -6" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M13 -6 L19 -6 L19 0" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
